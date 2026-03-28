@@ -207,7 +207,7 @@ get_strategies() {
         fi
         # Стратегии из репозитория
         if [ -d "$REPO_DIR" ]; then
-            find "$REPO_DIR" -maxdepth 1 -type f \( -name "general*.bat" -o -name "discord*.bat" \) -printf "%f\n" 2>/dev/null
+            find "$REPO_DIR" -maxdepth 1 -type f -name "*.bat" -printf "%f\n" 2>/dev/null
         fi
     } | sort -u
 }
